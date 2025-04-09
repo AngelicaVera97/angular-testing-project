@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
+
 export class TaskListComponent {
 
   tasks: string[] = [];
@@ -15,6 +16,7 @@ export class TaskListComponent {
 
   addTask(task: string) {
     console.log('Adding task:', task);
+    localStorage.setItem('tasks', JSON.stringify(this.addTask));
   }
 
   updateTask(task: string) {
